@@ -1,0 +1,31 @@
+﻿
+  GET|HEAD  / ............................................... routes/web.php:7
+  POST      _boost/browser-logs boost.browser-logs ÔÇ║ vendor/laravel/boost/srcÔÇŽ
+  GET|HEAD  admin filament.admin.pages.dashboard ÔÇ║ Filament\Pages ÔÇ║ Dashboard
+  GET|HEAD  admin/login .... filament.admin.auth.login ÔÇ║ Filament\Auth ÔÇ║ Login
+  POST      admin/logout filament.admin.auth.logout ÔÇ║ Filament\Auth ÔÇ║ LogoutCÔÇŽ
+  GET|HEAD  admin/posts filament.admin.resources.posts.index ÔÇ║ App\Filament\RÔÇŽ
+  GET|HEAD  admin/posts/create filament.admin.resources.posts.create ÔÇ║ App\FiÔÇŽ
+  GET|HEAD  admin/posts/{record}/edit filament.admin.resources.posts.edit ÔÇ║ AÔÇŽ
+  GET|HEAD  filament/exports/{export}/download filament.exports.download ÔÇ║ FiÔÇŽ
+  GET|HEAD  filament/imports/{import}/failed-rows/download filament.imports.fÔÇŽ
+  GET|HEAD  hello-world/{name} ......................... HelloController@index
+  GET|HEAD  livewire-b16cc398/css/{component}.css vendor/livewire/livewire/srÔÇŽ
+  GET|HEAD  livewire-b16cc398/css/{component}.global.css vendor/livewire/liveÔÇŽ
+  GET|HEAD  livewire-b16cc398/js/{component}.js vendor/livewire/livewire/src/ÔÇŽ
+  GET|HEAD  livewire-b16cc398/livewire.csp.min.js.map Livewire\Mechanisms ÔÇ║ FÔÇŽ
+  GET|HEAD  livewire-b16cc398/livewire.js Livewire\Mechanisms ÔÇ║ FrontendAssetÔÇŽ
+  GET|HEAD  livewire-b16cc398/livewire.min.js.map Livewire\Mechanisms ÔÇ║ FrontÔÇŽ
+  GET|HEAD  livewire-b16cc398/preview-file/{filename} livewire.preview-file  ÔÇŽ
+  POST      livewire-b16cc398/update default-livewire.update ÔÇ║ Livewire\MechaÔÇŽ
+  POST      livewire-b16cc398/upload-file livewire.upload-file ÔÇ║ Livewire\FeaÔÇŽ
+  POST      posts ......................... posts.store ÔÇ║ PostController@store
+  GET|HEAD  posts ......................... posts.index ÔÇ║ PostController@index
+  GET|HEAD  posts/create ................ posts.create ÔÇ║ PostController@create
+  GET|HEAD  posts/{slug} .................... posts.show ÔÇ║ PostController@show
+  GET|HEAD  storage/{path} storage.local ÔÇ║ vendor/laravel/framework/src/IllumÔÇŽ
+  PUT       storage/{path} storage.local.upload ÔÇ║ vendor/laravel/framework/srÔÇŽ
+  GET|HEAD  up vendor/laravel/framework/src/Illuminate/Foundation/ConfiguratiÔÇŽ
+
+                                                           Showing [27] routes
+

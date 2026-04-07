@@ -9,16 +9,22 @@
 
         <!-- Filters/Search Bar -->
         <div class="mb-6 flex flex-col sm:flex-row gap-4">
-            <div class="flex-1">
-                <input type="text" placeholder="Szukaj postów..."
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-            </div>
-            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500">
-                <option>Wszystkie kategorie</option>
-                <option>Laravel</option>
-                <option>React</option>
-                <option>AI & Copilot</option>
-            </select>
+            <form method="GET" action="{{ route('posts.index') }}" class="flex flex-col sm:flex-row gap-4 flex-1">
+                <div class="flex-1">
+                    <input type="text" name="search" placeholder="Szukaj postów..."
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        value="{{ request('search') }}">
+                </div>
+                <select name="category" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" onchange="this.form.submit()">
+                    <option value="all">Wszystkie kategorie</option>
+                    <option value="Laravel" @selected(request('category') === 'Laravel')>Laravel</option>
+                    <option value="React" @selected(request('category') === 'React')>React</option>
+                    <option value="AI & Copilot" @selected(request('category') === 'AI & Copilot')>AI & Copilot</option>
+                </select>
+                <button type="submit" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                    Szukaj
+                </button>
+            </form>
         </div>
 
         <!-- Posts Grid -->
@@ -39,6 +45,11 @@
                             @else
                                 <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">
                                     Szkic
+                                </span>
+                            @endif
+                            @if ($post->category)
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
+                                    {{ $post->category }}
                                 </span>
                             @endif
                         </div>

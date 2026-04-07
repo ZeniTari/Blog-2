@@ -34,6 +34,23 @@
             <div class="text-red-500">{{ $message }}</div>
         @enderror
 
+        <label>Kategoria</label>
+        <select name="category">
+            <option value="">Brak kategorii</option>
+            <option value="Laravel" @selected(old('category') === 'Laravel')>Laravel</option>
+            <option value="React" @selected(old('category') === 'React')>React</option>
+            <option value="AI & Copilot" @selected(old('category') === 'AI & Copilot')>AI & Copilot</option>
+        </select>
+        @error('category')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+
+        <label>Tagi (oddzielone przecinkami)</label>
+        <input type="text" name="tags" value="{{ old('tags') }}" placeholder="laravel, php, docker" />
+        @error('tags')
+            <div class="text-red-500">{{ $message }}</div>
+        @enderror
+
         <label>Treść</label>
         <textarea name="content">{{ old('content') }}</textarea>
         @error('content')
