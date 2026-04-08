@@ -174,7 +174,11 @@
 
         <!-- Related Posts -->
         <section class="mt-12">
+<<<<<<< HEAD
             <h2 class="text-2xl font-bold text-gray-900 mb-6">Powiązane artykuły</h2>
+=======
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Inne artykuły</h2>
+>>>>>>> ffce6b3 (Update project)
             <div class="grid gap-6 md:grid-cols-3">
 
                 <!-- Related Post 1 -->
